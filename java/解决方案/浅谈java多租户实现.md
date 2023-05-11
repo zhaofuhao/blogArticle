@@ -1,6 +1,7 @@
-
-
 ## Spring Boot 构建多租户系统 实现动态切换数据源
+
+> 具体可以看github代码示例：https://github.com/zhaofuhao/springBootMultiTenant
+> gitee: https://gitee.com/nwjshm/springBootMultiTenant
 
 ### 概述
 
@@ -73,7 +74,6 @@ SaaS(Software as a Service)，多租户系统（一套系统，不同租户数�
 #### 数据表准备
 
 ```sql
-
 -- 租户表
 CREATE TABLE `sys_data_source` (
   `id` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
@@ -101,7 +101,6 @@ CREATE TABLE `sys_data_source` (
 >jeecgboot有一个多数据管理的页面 我就基于他那个功能修改了一下
 
 ```java
-
 @Override
     public Result saveDataSource(SysDataSource sysDataSource) {
         try {
@@ -233,4 +232,3 @@ public class TenantDsInterceptor implements HandlerInterceptor {
     }
 }
 ```
-
